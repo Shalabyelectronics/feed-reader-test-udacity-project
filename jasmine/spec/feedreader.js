@@ -14,7 +14,7 @@ $(
      * a related set of tests. This suite is all about the RSS
      * feeds definitions, the allFeeds variable in our application.
      */
-    describe("RSS Feeds", function() {
+    describe("RSS Feeds", () => {
       /* This is our first test - it tests to make sure that the
        * allFeeds variable has been defined and that it is not
        * empty. Experiment with this before you get started on
@@ -42,15 +42,22 @@ $(
        * in the allFeeds object and ensures it has a name defined
        * and that the name is not empty.
        */
+      it("each has name", () => {
+        for (let feed of allFeeds) {
+          expect(feed.name).toBeDefined();
+          expect(feed.name.length).not.toBe(0);
+        }
+      });
     });
 
     /* TODO: Write a new test suite named "The menu" */
-
-    /* TODO: Write a test that ensures the menu element is
-     * hidden by default. You'll have to analyze the HTML and
-     * the CSS to determine how we're performing the
-     * hiding/showing of the menu element.
-     */
+    describe("the menu", () => {
+      /* TODO: Write a test that ensures the menu element is
+       * hidden by default. You'll have to analyze the HTML and
+       * the CSS to determine how we're performing the
+       * hiding/showing of the menu element.
+       */
+    });
 
     /* TODO: Write a test that ensures the menu changes
      * visibility when the menu icon is clicked. This test
