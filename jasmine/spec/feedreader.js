@@ -45,6 +45,7 @@ $(
       it("each has name", () => {
         for (let feed of allFeeds) {
           expect(feed.name).toBeDefined();
+          expect(feed.name.constructor).toBe(String);
           expect(feed.name.length).not.toBe(0);
         }
       });
