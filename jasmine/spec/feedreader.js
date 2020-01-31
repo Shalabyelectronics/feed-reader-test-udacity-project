@@ -58,6 +58,10 @@ $(
        * the CSS to determine how we're performing the
        * hiding/showing of the menu element.
        */
+      it("hidden by default", () => {
+        let isHidden = document.body.classList.contains("menu-hidden");
+        expect(isHidden).toBe(true);
+      });
     });
 
     /* TODO: Write a test that ensures the menu changes
