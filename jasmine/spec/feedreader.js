@@ -88,6 +88,11 @@ $(
       beforeEach(function(done) {
         loadFeed(1, done);
       });
+
+      it("has entries in feed container", () => {
+        let feedContainer = document.querySelector("div.feed");
+        expect(feedContainer.children.length).toBeGreaterThan(0);
+      });
     });
 
     /* TODO: Write a new test suite named "New Feed Selection" */
