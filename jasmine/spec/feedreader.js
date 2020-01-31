@@ -91,7 +91,8 @@ $(
 
       it("has entries in feed container", () => {
         let feedContainer = document.querySelector("div.feed");
-        expect(feedContainer.children.length).toBeGreaterThan(0);
+        let entries = feedContainer.querySelectorAll("article.entry");
+        expect(entries.length).toBeGreaterThan(0);
       });
     });
 
